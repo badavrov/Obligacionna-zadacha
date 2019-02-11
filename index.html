@@ -1,0 +1,170 @@
+<!DOCTYPE html5>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+  </head>
+  <body>
+        <h1 style="color:blue; text-align: center">Програма за решаване на задачи с облигации със срок до 5 години.</h1>
+    <div class="frontpage">
+      <div class="exercise">
+        <h3>Пример за задача, която може да бъде решена.</h3>
+        <a
+          >Да се състави погасителен план на 9% облигационен заем от 100 000лв.,
+          разделен на 100 облигации по 1000лв. всяка. Срокът на заема е 5
+          години.</a
+        >
+        <div class="table">
+          <table class="table table-bordered" style="width:100%">
+            <tr>
+              <th>Години</th>
+              <th>Остатъци от заема Ki</th>
+              <th>Облигации обръщение Оi</th>
+              <th>Облигации тираж ai</th>
+              <th>Практическо (реално) погашение Пi</th>
+              <th>Лихви Li</th>
+              <th>Практически (реални) вноски Ai</th>
+              <th>Остатъци Ri</th>
+              <th>Теоретична главница Ti</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td><a id="ki1"></a></td>
+              <td><a id="oi1"></a></td>
+              <td><a id="ai1"></a></td>
+              <td><a id="pi1"></a></td>
+              <td><a id="li1"></a></td>
+              <td><a id="vnosA1"></a></td>
+              <td><a id="ri1"></a></td>
+              <td><a id="ti1"></a></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><a id="ki2"></a></td>
+              <td><a id="oi2"></a></td>
+              <td><a id="ai2"></a></td>
+              <td><a id="pi2"></a></td>
+              <td><a id="li2"></a></td>
+              <td><a id="vnosA2"></a></td>
+              <td><a id="ri2"></a></td>
+              <td><a id="ti2"></a></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><a id="ki3"></a></td>
+              <td><a id="oi3"></a></td>
+              <td><a id="ai3"></a></td>
+              <td><a id="pi3"></a></td>
+              <td><a id="li3"></a></td>
+              <td><a id="vnosA3"></a></td>
+              <td><a id="ri3"></a></td>
+              <td><a id="ti3"></a></td>
+            </tr>
+            <tr>
+              <td>-</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><a id="riCustom1"></a></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td><a id="ki4"></a></td>
+              <td><a id="oi4"></a></td>
+              <td><a id="ai4"></a></td>
+              <td><a id="pi4"></a></td>
+              <td><a id="li4"></a></td>
+              <td><a id="vnosA4"></a></td>
+              <td><a id="ri4"></a></td>
+              <td><a id="ti4"></a></td>
+            </tr>
+            <tr>
+              <td>-</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><a id="riCustom2"></a></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td><a id="ki5"></a></td>
+              <td><a id="oi5"></a></td>
+              <td><a id="ai5"></a></td>
+              <td><a id="pi5"></a></td>
+              <td><a id="li5"></a></td>
+              <td><a id="vnosA5"></a></td>
+              <td><a id="ri5"></a></td>
+              <td><a id="ti5"></a></td>
+            </tr>
+            <tr>
+              <td>-</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><a id="riCustom3"></a></td>
+              <td><a id="tiCustom1"></a></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="form">
+        <h1>Въведете следните даннни.</h1>
+        <span>i (год.лихвен % по заема):</span>
+        <input id="i" type="number" placeholder="0.09" /> >> като 1% = 0.01
+        <br />
+        <span>Лв заем:</span>
+        <input id="lv" type="number" placeholder="100000" />
+        <br />
+        <span>Разделен на облигации:</span>
+        <input id="obl" type="number" placeholder="100" />
+        <br />
+        <span>Лева облигация:</span>
+        <input id="lvobl" type="number" placeholder="1000" />
+        <br />
+        <span>n (Срок на заема):</span>
+        <input id="srok" type="number" placeholder="5" /> >> в години
+        <br />
+        <span>q (i+1):</span>
+        <input id="q" type="number" disabled />
+        <br />
+        <span>KWF:</span>
+        <input id="kwf" type="number" disabled />
+        <br />
+        <span>A* (лв заем * KWF):</span>
+        <input id="a" type="number" disabled />
+        <br />
+        <input
+          class="btn btn-primary"
+          type="submit"
+          value="Submit"
+          onclick="Calculate()"
+        />
+      </div>
+    </div>
+  </body>
+  <footer>
+      <h3 style="color:blue; text-align: center;">Проект на Денислав Стилиянов Бадавров с фак.ном 1501561066</h1>
+  </footer>
+</html>

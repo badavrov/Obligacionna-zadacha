@@ -1,0 +1,19 @@
+.frontpage{
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    width: 100%;
+    padding: 20px;
+}
+.exercise{
+    width: 90%;
+}
+.form{
+    width: 90%;
+}
+.table{
+    margin: 20px;
+}
+.form input{
+    margin: 10px;
+    width: 10%;
+}
