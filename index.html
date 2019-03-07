@@ -21,9 +21,8 @@
       <div class="exercise">
         <h3>Пример за задача, която може да бъде решена.</h3>
         <a
-          >Да се състави погасителен план на 9% облигационен заем от 100 000лв.,
-          разделен на 100 облигации по 1000лв. всяка. Срокът на заема е 5
-          години.</a
+          >Да се състави погасителен план на облигационен заем от 500 000лв., разделен на 1050 облигации, от които първата емисия от 450 облигации са с номинална стойност 1000лв., следващите 400 облигации са с номинал 100 лв. и последната емисия от 200 облигации са с номинал 50 лв.  Заемът е с 5% годишен лихвен процент и срок 7 години. 								
+          </a
         >
         <div class="table">
           <table class="table table-bordered" style="width:100%">
@@ -71,18 +70,7 @@
               <td><a id="ri3"></a></td>
               <td><a id="ti3"></a></td>
             </tr>
-            <tr>
-              <td>-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td><a id="riCustom1"></a></td>
-              <td></td>
-            </tr>
-            <tr>
+            <tr id="4">
               <td>4</td>
               <td><a id="ki4"></a></td>
               <td><a id="oi4"></a></td>
@@ -93,18 +81,7 @@
               <td><a id="ri4"></a></td>
               <td><a id="ti4"></a></td>
             </tr>
-            <tr>
-              <td>-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td><a id="riCustom2"></a></td>
-              <td></td>
-            </tr>
-            <tr>
+            <tr id="5">
               <td>5</td>
               <td><a id="ki5"></a></td>
               <td><a id="oi5"></a></td>
@@ -115,37 +92,67 @@
               <td><a id="ri5"></a></td>
               <td><a id="ti5"></a></td>
             </tr>
-            <tr>
-              <td>-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td><a id="riCustom3"></a></td>
-              <td><a id="tiCustom1"></a></td>
+            <tr id="6">
+              <td>6</td>
+              <td><a id="ki6"></a></td>
+              <td><a id="oi6"></a></td>
+              <td><a id="ai6"></a></td>
+              <td><a id="pi6"></a></td>
+              <td><a id="li6"></a></td>
+              <td><a id="vnosA6"></a></td>
+              <td><a id="ri6"></a></td>
+              <td><a id="ti6"></a></td>
             </tr>
+            <tr id="7">
+            <td>7</td>
+            <td><a id="ki7"></a></td>
+            <td><a id="oi7"></a></td>
+            <td><a id="ai7"></a></td>
+            <td><a id="pi7"></a></td>
+            <td><a id="li7"></a></td>
+            <td><a id="vnosA7"></a></td>
+            <td><a id="ri7"></a></td>
+            <td><a id="ti7"></a></td>
+          </tr>
           </table>
         </div>
       </div>
       <div class="form">
         <h1>Въведете следните даннни.</h1>
         <span>i (год.лихвен % по заема):</span>
-        <input id="i" type="number" placeholder="0.09" /> >> като 1% = 0.01
+        <input id="i" type="number" placeholder="0.05" /> >> като 1% = 0.01
         <br />
         <span>Лв заем:</span>
-        <input id="lv" type="number" placeholder="100000" />
+        <input id="lv" type="number" placeholder="500000" />
         <br />
         <span>Разделен на облигации:</span>
-        <input id="obl" type="number" placeholder="100" />
-        <br />
-        <span>Лева облигация:</span>
-        <input id="lvobl" type="number" placeholder="1000" />
+        <input id="obl" type="number" placeholder="1050" />
         <br />
         <span>n (Срок на заема):</span>
-        <input id="srok" type="number" placeholder="5" /> >> в години
+        <input id="srok" type="number" placeholder="7" /> >> в години
         <br />
+        <span>Колко емисии1-3? :</span>
+        <input id="emisyi" type="number" placeholder="3" />
+        <br />
+        <span>Първа емисия лева :</span>
+        <input id="lvobl" type="number" placeholder="1000" />
+        <br />
+        <span>Първа емисия брой облигации :</span>
+        <input id="broiobl" type="number" placeholder="450" />
+        <br />
+        <span>Втора емисия лева :</span>
+        <input id="lvobl2" type="number" placeholder="100" />
+        <br />
+        <span>Втора емисия брой облигации :</span>
+        <input id="broiobl2" type="number" placeholder="400" />
+        <br />
+        <span>Трета емисия лева :</span>
+        <input id="lvobl3" type="number" placeholder="50" />
+        <br />
+        <span>Трета емисия брой облигации :</span>
+        <input id="broiobl3" type="number" placeholder="200" />
+        <br />
+        <a>Ако няма трета или втора емисия въведи 0 на мястото на ЛВ и Облигации</a>
         <span>q (i+1):</span>
         <input id="q" type="number" disabled />
         <br />
